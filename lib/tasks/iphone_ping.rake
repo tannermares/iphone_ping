@@ -17,7 +17,7 @@ task :iphone_ping do
     from    = Email.new(email: 'tannermares+iPhonePing@gmail.com')
     subject = 'Check iStockNow!'
     to      = Email.new(email: 'tannermares@gmail.com')
-    content = Content.new(type: 'text/plain', value: "Dude go check iStockNow! http://www.istocknow.com/live/live")
+    content = Content.new(type: 'text/plain', value: "Dude go check iStockNow! http://www.istocknow.com/live")
     mail    = Mail.new(from, subject, to, content)
 
     sg       = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
